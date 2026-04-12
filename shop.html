@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the Aura Handcrafted Jewellery collection. Unique artisanal pieces.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Shop All | Aura Handcrafted Jewellery</title>
+
+    <style>
+        .shop-header {
+            padding: 60px 0 30px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AURA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="shopDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <li><a class="dropdown-item" href="shop.html">Shop All</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="shop.html?category=necklace">Necklace</a></li>
+                            <li><a class="dropdown-item" href="shop.html?category=hand-bracelet">Hand Bracelet</a></li>
+                            <li><a class="dropdown-item" href="shop.html?category=earrings">Earrings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-header">
+        <div class="container">
+            <h1 id="shopTitle">The Collection</h1>
+            <p class="text-muted">Handcrafted pieces, made in small batches.</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="section-padding container">
+        <!-- Product Grid -->
+        <div class="row g-4" id="productGrid">
+            <!-- NECKLACES -->
+            <!-- Product 1 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace1.jpg" alt="Aura Gold Necklace">
+                    </div>
+                    <h5 class="card-title">Aura Gold Necklace</h5>
+                    <p class="card-price">₹3,600.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Aura Gold Necklace&price=3600&img=images/necklace1.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace2.jpg" alt="Artisanal Silver Chain">
+                    </div>
+                    <h5 class="card-title">Artisanal Silver Chain</h5>
+                    <p class="card-price">₹4,800.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Artisanal Silver Chain&price=4800&img=images/necklace2.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace3.jpg" alt="Hand-Forged Pendant">
+                    </div>
+                    <h5 class="card-title">Hand-Forged Pendant</h5>
+                    <p class="card-price">₹2,400.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Hand-Forged Pendant&price=2400&img=images/necklace3.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace4.jpg" alt="Bohemia Beaded Necklace">
+                    </div>
+                    <h5 class="card-title">Bohemia Beaded Necklace</h5>
+                    <p class="card-price">₹1,920.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Bohemia Beaded Necklace&price=1920&img=images/necklace4.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace5.jpg" alt="Classic V-Necklace">
+                    </div>
+                    <h5 class="card-title">Classic V-Necklace</h5>
+                    <p class="card-price">₹2,800.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Classic V-Necklace&price=2800&img=images/necklace5.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="necklace">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/necklace6.jpg" alt="Minimalist Choker">
+                    </div>
+                    <h5 class="card-title">Minimalist Choker</h5>
+                    <p class="card-price">₹4,200.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Minimalist Choker&price=4200&img=images/necklace6.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAND BRACELETS -->
+            <!-- Product 7 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet1.jpg" alt="Handcrafted Silver Cuff">
+                    </div>
+                    <h5 class="card-title">Handcrafted Silver Cuff</h5>
+                    <p class="card-price">₹4,640.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Handcrafted Silver Cuff&price=4640&img=images/handbracelet1.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet2.jpg" alt="Braided Leather Bracelet">
+                    </div>
+                    <h5 class="card-title">Braided Leather Bracelet</h5>
+                    <p class="card-price">₹1,200.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Braided Leather Bracelet&price=1200&img=images/handbracelet2.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet3.jpg" alt="Beaded Charm Bracelet">
+                    </div>
+                    <h5 class="card-title">Beaded Charm Bracelet</h5>
+                    <p class="card-price">₹1,600.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Beaded Charm Bracelet&price=1600&img=images/handbracelet3.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet4.jpg" alt="Minimalist Gold Band">
+                    </div>
+                    <h5 class="card-title">Minimalist Gold Band</h5>
+                    <p class="card-price">₹2,560.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Minimalist Gold Band&price=2560&img=images/handbracelet4.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet5.jpg" alt="Artisanal Weave Bracelet">
+                    </div>
+                    <h5 class="card-title">Artisanal Weave Bracelet</h5>
+                    <p class="card-price">₹2,240.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Artisanal Weave Bracelet&price=2240&img=images/handbracelet5.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="hand-bracelet">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/handbracelet6.jpg" alt="Timeless Silver Bangle">
+                    </div>
+                    <h5 class="card-title">Timeless Silver Bangle</h5>
+                    <p class="card-price">₹4,000.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Timeless Silver Bangle&price=4000&img=images/handbracelet6.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EARRINGS -->
+            <!-- Product 13 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings1.jpg" alt="Pearl Drop Earrings">
+                    </div>
+                    <h5 class="card-title">Pearl Drop Earrings</h5>
+                    <p class="card-price">₹2,240.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Pearl Drop Earrings&price=2240&img=images/earings1.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 14 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings2.jpg" alt="Golden Hoop Earrings">
+                    </div>
+                    <h5 class="card-title">Golden Hoop Earrings</h5>
+                    <p class="card-price">₹1,680.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Golden Hoop Earrings&price=1680&img=images/earings2.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 15 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings3.jpg" alt="Silver Stud Earrings">
+                    </div>
+                    <h5 class="card-title">Silver Stud Earrings</h5>
+                    <p class="card-price">₹1,440.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Silver Stud Earrings&price=1440&img=images/earings3.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 16 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings4.jpg" alt="Crystal Dangle Earrings">
+                    </div>
+                    <h5 class="card-title">Crystal Dangle Earrings</h5>
+                    <p class="card-price">₹3,200.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Crystal Dangle Earrings&price=3200&img=images/earings4.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 17 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings5.jpg" alt="Floral Motif Earrings">
+                    </div>
+                    <h5 class="card-title">Floral Motif Earrings</h5>
+                    <p class="card-price">₹1,840.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Floral Motif Earrings&price=1840&img=images/earings5.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 18 -->
+            <div class="col-sm-6 col-lg-4 text-center product-item" data-category="earrings">
+                <div class="card product-card">
+                    <div class="img-container">
+                        <img src="images/earings6.jpg" alt="Modern Geometric Hoops">
+                    </div>
+                    <h5 class="card-title">Modern Geometric Hoops</h5>
+                    <p class="card-price">₹1,280.00</p>
+                    <div class="mt-3">
+                        <a href="purchase.html?name=Modern Geometric Hoops&price=1280&img=images/earings6.jpg"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top section-padding py-4">
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">&copy; 2026 AURA Handcrafted Jewellery.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const category = params.get('category');
+            if (category) {
+                const products = document.querySelectorAll('.product-item');
+                products.forEach(p => {
+                    if (p.dataset.category !== category) {
+                        p.style.display = 'none';
+                    }
+                });
+
+                // Update title
+                const titleMap = {
+                    'necklace': 'Necklaces',
+                    'hand-bracelet': 'Hand Bracelets',
+                    'earrings': 'Earrings'
+                };
+                if (titleMap[category]) {
+                    document.getElementById('shopTitle').innerText = titleMap[category];
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Jewelry Collection | AURA</title>
+
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#fafafa; color: #333; }
+
+/* Navbar */
+.navbar {
+    background:#222;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.navbar .brand { color: white; font-weight: bold; font-size: 24px; text-decoration: none; }
+.navbar a { color:#ccc; text-decoration:none; margin-left: 20px; font-size: 14px; }
+.navbar a:hover { color: white; }
+
+/* Products */
+.products {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap:40px;
+    padding:60px 5%;
+}
+
+/* Card */
+.product {
+    background:white;
+    padding:0;
+    width:280px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.product:hover { transform: translateY(-10px); }
+.product img { width: 100%; height: 280px; object-fit: cover; }
+.product-info { padding: 20px; }
+.product h3 { margin: 10px 0; font-size: 18px; }
+
+label {
+    display: inline-block;
+    background:#333;
+    color:white;
+    padding:10px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Hide checkbox */
+input { display:none; }
+
+/* Cart */
+.cart {
+    background:white;
+    margin:0 5% 60px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cart-item { display:none; padding: 10px; border-bottom: 1px solid #eee; color: #555; }
+
+/* ✅ WORKING LOGIC */
+#p1:checked ~ .cart #c1 { display:block; }
+#p2:checked ~ .cart #c2 { display:block; }
+#p3:checked ~ .cart #c3 { display:block; }
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">AURA</a>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+    </div>
+</div>
+
+<h2 style="text-align:center; margin-top: 40px; font-weight: 300; font-size: 32px;">The Essentials</h2>
+
+<!-- ✅ IMPORTANT: Inputs MUST be here -->
+<input type="checkbox" id="p1">
+<input type="checkbox" id="p2">
+<input type="checkbox" id="p3">
+
+<!-- Products -->
+<div class="products">
+    <div class="product">
+        <img src="images/necklace1.jpg" alt="Aura Gold Necklace">
+        <div class="product-info">
+            <h3>Aura Gold Necklace</h3>
+            <label for="p1">Add to Cart</label>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="images/handbracelet1.jpg" alt="Handcrafted Silver Cuff">
+        <div class="product-info">
+            <h3>Handcrafted Silver Cuff</h3>
+            <label for="p2">Add to Cart</label>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="images/earings1.jpg" alt="Pearl Drop Earrings">
+        <div class="product-info">
+            <h3>Pearl Drop Earrings</h3>
+            <label for="p3">Add to Cart</label>
+        </div>
+    </div>
+</div>
+
+<!-- Cart -->
+<div class="cart">
+    <h2 style="font-weight: 300;">🛒 Your Selection</h2>
+
+    <p style="color: #999; font-size: 14px;">Items will appear here once added.</p>
+
+    <div id="c1" class="cart-item">✔ Aura Gold Necklace</div>
+    <div id="c2" class="cart-item">✔ Handcrafted Silver Cuff</div>
+    <div id="c3" class="cart-item">✔ Pearl Drop Earrings</div>
+    
+    <div style="margin-top: 20px;">
+        <a href="cart.html" style="color: #333; text-decoration: none; font-size: 14px;">View Full Cart ➡</a>
+    </div>
+</div>
+
+</body>
+</html>

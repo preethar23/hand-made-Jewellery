@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Aura Handcrafted Jewellery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .purchase-container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #eee;
+    }
+
+    #productImg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .product-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AURA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+              <li><a class="dropdown-item" href="shop.html">Shop All</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="shop.html?category=necklace">Necklace</a></li>
+              <li><a class="dropdown-item" href="shop.html?category=hand-bracelet">Hand Bracelet</a></li>
+              <li><a class="dropdown-item" href="shop.html?category=earrings">Earrings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Bespoke</a></li>
+          <li class="nav-item ms-lg-3"><a href="cart.html" class="nav-link">Bag (0)</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="purchase-container">
+    <h2 class="mb-4">Order Summary</h2>
+
+    <img id="productImg"
+      src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=400" alt="Product">
+
+    <h4 id="productName" class="product-name">Handcrafted Necklace</h4>
+    <p id="productPrice" class="product-price">₹36,000.00</p>
+
+    <div class="mb-4 text-start small text-muted">
+      <p>Delivery: Standard Shipping (3-5 days)<br>Shipping Cost: Free</p>
+    </div>
+
+    <button onclick="checkout()" class="btn btn-dark btn-lg w-100 py-3">Complete Purchase</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 border-top">
+    <div class="container">
+      <p class="mb-0 text-muted small">&copy; 2026 AURA Handcrafted Jewellery.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Get data from URL
+    let params = new URLSearchParams(window.location.search);
+    let name = params.get("name");
+    let price = params.get("price");
+    let img = params.get("img");
+
+    if (name) document.getElementById("productName").innerText = name;
+    if (price) {
+      document.getElementById("productPrice").innerText = "₹" + Number(price).toLocaleString('en-IN') + ".00";
+    }
+    if (img) document.getElementById("productImg").src = img;
+
+    function checkout() {
+      let priceText = document.getElementById("productPrice").innerText;
+      let amount = priceText.replace("₹", "").replace(/,/g, "").trim();
+      window.location.href = "thankyou.html?amount=" + amount;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

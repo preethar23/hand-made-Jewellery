@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Aura Handcrafted Jewellery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .thankyou-card {
+            background: white;
+            padding: 40px;
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            border: 1px solid #eee;
+        }
+
+        .check-icon {
+            font-size: 3rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .order-details {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fdfdfd;
+            border: 1px solid #f0f0f0;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .order-details div {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .order-details span:first-child {
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thankyou-card">
+        <div class="check-icon">✓</div>
+        <h2 class="mb-3">Order Confirmed</h2>
+        <p class="text-muted">Thank you for supporting our small business. We've received your order.</p>
+
+        <div class="order-details">
+            <div>
+                <span>Order ID</span>
+                <span id="orderId">#AURA-000000</span>
+            </div>
+            <div>
+                <span>Date</span>
+                <span id="date">--</span>
+            </div>
+            <div>
+                <span>Total Paid</span>
+                <span id="amount">₹0.00</span>
+            </div>
+        </div>
+
+        <p class="small text-muted mb-4">You'll receive a confirmation email shortly with tracking details.</p>
+
+        <a href="index.html" class="btn btn-dark w-100">Continue Shopping</a>
+    </div>
+
+    <script>
+        // Get amount from URL
+        let params = new URLSearchParams(window.location.search);
+        let amount = params.get("amount");
+        if (amount) {
+            document.getElementById("amount").innerText = "₹" + Number(amount).toLocaleString('en-IN') + ".00";
+        }
+
+        // Generate random Order ID
+        let orderId = "AURA-" + Math.floor(Math.random() * 800000 + 100000);
+        document.getElementById("orderId").innerText = "#" + orderId;
+
+        // Current Date
+        let now = new Date();
+        document.getElementById("date").innerText = now.toLocaleDateString();
+    </script>
+
+</body>
+
+</html>

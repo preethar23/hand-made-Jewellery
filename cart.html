@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your shopping bag at Aura Handcrafted Jewellery.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Your Bag | Aura Handcrafted Jewellery</title>
+
+    <style>
+        .cart-header {
+            padding: 60px 0 30px;
+            text-align: center;
+            background-color: #fcfcfc;
+        }
+
+        .cart-item {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-item img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .cart-item-info h5 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-info p {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .total-section {
+            padding: 30px;
+            background: #f9f9f9;
+            margin-top: 30px;
+            text-align: right;
+            border: 1px solid #eee;
+        }
+
+        .total-amount {
+            font-size: 1.8rem;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AURA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <li><a class="dropdown-item" href="shop.html">Shop All</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="shop.html?category=necklace">Necklace</a></li>
+                            <li><a class="dropdown-item" href="shop.html?category=hand-bracelet">Hand Bracelet</a></li>
+                            <li><a class="dropdown-item" href="shop.html?category=earrings">Earrings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Bespoke</a></li>
+                    <li class="nav-item ms-lg-3"><a href="cart.html" class="nav-link active">Bag (0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Header -->
+    <section class="cart-header">
+        <div class="container">
+            <h1>Shopping Bag</h1>
+            <p class="text-muted">Review your selected items before checkout.</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="item-select" data-price="36000" checked>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=200"
+                        alt="Necklace">
+                    <div class="cart-item-info">
+                        <h5>Handcrafted Gold Necklace</h5>
+                        <p>₹36,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="item-select" data-price="25600">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3f416?auto=format&fit=crop&q=80&w=200"
+                        alt="Ring">
+                    <div class="cart-item-info">
+                        <h5>Artisanal Silver Ring</h5>
+                        <p>₹25,600.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="total-section">
+                    <h6 class="text-uppercase mb-4">Summary</h6>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span id="subtotalText">₹0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <hr>
+                    <div class="total-amount" id="totalText">₹0.00</div>
+                    <button class="btn btn-dark w-100 py-3" onclick="checkout()">Checkout Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 border-top">
+        <div class="container">
+            <p class="mb-0 text-muted small">&copy; 2026 AURA Handcrafted Jewellery.</p>
+        </div>
+    </footer>
+
+    <script>
+        const checkboxes = document.querySelectorAll(".item-select");
+        const totalText = document.getElementById("totalText");
+        const subtotalText = document.getElementById("subtotalText");
+
+        function updateTotal() {
+            let total = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    total += Number(cb.dataset.price);
+                }
+            });
+            const formatted = `₹${total.toLocaleString('en-IN')}.00`;
+            totalText.innerText = formatted;
+            subtotalText.innerText = formatted;
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener("change", updateTotal));
+
+        // Initial call
+        updateTotal();
+
+        function checkout() {
+            let total = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) total += Number(cb.dataset.price);
+            });
+
+            if (total === 0) {
+                alert("Your bag is empty. Please select an item.");
+            } else {
+                // Pass the amount to the thank you page
+                window.location.href = "thankyou.html?amount=" + total;
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
